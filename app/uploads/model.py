@@ -1,0 +1,21 @@
+import tensorflow as tf
+import keras
+import numpy as np
+import matplotlib.pyplot as plt
+import cv2
+
+base = 'D:/deepfacedetec/app/uploads'
+model = keras.models.load_model(f'{base}/model_dfake-face.h5')
+
+def image_pre(path):
+    data = np.ndarray(shape = (1,128,128,1),dtype=np.float32)
+    img = cv2.imread(path)
+    img = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+    img = cv2.resize(img,(128,128))
+    img = np.array(img)
+    data = img.reshape((-1,128,128,1))
+    return data
+
+def predict(data):
+    prediction = model.predict(data)
+    return prediction[0][0]
