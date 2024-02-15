@@ -1,6 +1,6 @@
 # Fake Person AI Face Identifier 🤖🕵️‍♂️
 
-![Fake Person AI Face Identifier](link_to_project_image)
+[Fake Person AI Face Identifier](https://deep-fake-generated-people-facial-recognition.streamlit.app/)
 
 This web application is designed to distinguish between real faces and AI-generated ones using a Convolutional Neural Network (CNN). The model has been trained on a robust dataset of 140,000 images, ensuring accuracy and reliability.
 
