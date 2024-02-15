@@ -24,5 +24,3 @@ We are committed to improving our model:
 This tool, when used in conjunction with human knowledge, aids in identifying AI-generated faces. Results may vary, and the model may not capture the effects of state-of-the-art models like StableDiffusion but performs well with samples from This Person Does Not Exist's website.
 
 Feel free to contribute or provide feedback to make this tool even more powerful!
-
-![Sample Result](link_to_sample_result_image)
