@@ -4,4 +4,3 @@ numpy>=1.21.5
 matplotlib>=3.4.3
 opencv-python>=4.5.3
 streamlit>=1.10.0
-python>3.9.0
