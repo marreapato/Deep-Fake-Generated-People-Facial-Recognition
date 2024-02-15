@@ -4,8 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import cv2
 
-base = 'D:/gitrepos/Deep-Fake-Generated-People-Facial-Recognition/streamlit-app'
-model = keras.models.load_model(f'{base}/model_dfake-face.h5')
+#base = 'D:/gitrepos/Deep-Fake-Generated-People-Facial-Recognition/streamlit-app'
+model = keras.models.load_model('model_dfake-face.h5')
 
 def image_pre(image_data):
     data = np.ndarray(shape = (1,128,128,1),dtype=np.float32)
