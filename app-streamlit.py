@@ -2,6 +2,7 @@ import streamlit as st
 import numpy as np
 import os
 from model import image_pre,predict
+from lime_explainer import explanation
 
 
 def load_image():
@@ -29,6 +30,13 @@ def main():
         result = predict(getting_data)
         st.write('Probability of not being an AI Generated Face: ', str(result*100)[0:5]+"%")
 
+        explanation_fig = explanation(getting_data)
+        
+        st.write("Explanation (Green color had a positive contribution to the prediction whereas red color had a negative contribution)")
+        st.pyplot(explanation_fig)
+        
+        
+          
     st.markdown("![Alt Text](https://i.gifer.com/ZdPG.gif)")
     
     # Description
@@ -37,10 +45,9 @@ def main():
     st.write("Just upload a picture of a person's face, and our AI will analyze it, providing you with the probability of whether the face is real or fake. 📸")
 
 # What's New
-    st.write("🚀 **What's New in Version 1.0.0:**")
-    st.write("- Initial release!")
-    st.write("- CNN model implementation.")
-    st.write("- Basic probability prediction.")
+    st.write("🚀 **What's New in Version 1.1.0:**")
+    st.write("- XAI Implementation Lime Explanations")
+    st.write("- Softmax Activation Function.")
 
 # Future Updates
     st.write("🔜 **Future Updates:**")
@@ -50,6 +57,7 @@ def main():
 
 # Disclaimer
     st.write("*This tool when used together with human knowledge can help identify ai-generated people. Results may vary. (The model does not capture the effect of state-of-art models such as StableDiffusion, but it works well with samples from [This Person Does Not Exist's Website](https://thispersondoesnotexist.com/))* 📝")
+    
     
 if __name__ == '__main__':
     main()
