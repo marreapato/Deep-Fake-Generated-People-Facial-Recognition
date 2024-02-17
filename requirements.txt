@@ -4,3 +4,4 @@ numpy>=1.21.5
 matplotlib>=2.4.3
 opencv-python-headless
 streamlit>=1.10.0
+lime>=1.10.0
