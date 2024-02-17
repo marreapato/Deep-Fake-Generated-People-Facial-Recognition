@@ -8,12 +8,10 @@ import cv2
 model = keras.models.load_model('model_dfake-face_softmax.h5')
 
 def image_pre(image_data):
-    data = np.ndarray(shape = (1,128,128,1),dtype=np.float32)
-    img = img = cv2.imdecode(np.frombuffer(image_data, np.uint8), -1)
-    img = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+    img = img = cv2.imdecode(np.frombuffer(image_data, np.float32), -1)
     img = cv2.resize(img,(128,128))
     img = np.array(img)
-    data = img.reshape((-1,128,128,1))
+    data = img.reshape((-1,128,128,3))
     return data
 
 def predict(data):
