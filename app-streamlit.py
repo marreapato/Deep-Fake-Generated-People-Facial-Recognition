@@ -18,7 +18,7 @@ def main():
     badge_markdown = "[![License](https://img.shields.io/github/license/marreapato/Deep-Fake-Generated-People-Facial-Recognition.svg?logo=github&style=social)](https://github.com/marreapato/Deep-Fake-Generated-People-Facial-Recognition)"
     badge_markdown_lkd = "[![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lucas-rabelo-ab58492a1/?locale=en_US)"
 
-    st.title('🤖 Fake Person AI Generated Face Identifier v1.0.0 🕵️‍♂️')
+    st.title('🤖 Fake Person AI Generated Face Identifier v1.1.0 🕵️‍♂️')
     # Render the badge using st.markdown
     st.markdown(badge_markdown, unsafe_allow_html=True)
     st.markdown(badge_markdown_lkd, unsafe_allow_html=True)
